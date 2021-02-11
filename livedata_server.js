@@ -101,6 +101,7 @@ _.extend(SessionDocumentView.prototype, {
       }
       elt.value = value;
     } else {
+      changeCollector[key] = value;
       // this subscription is newly caring about this field
       precedenceList.push({subscriptionHandle: subscriptionHandle, value: value});
     }
